@@ -31,8 +31,14 @@ int main(int argc, const char * argv[]) {
         }
         
         BNRItem *item = [[BNRItem alloc] init];
-        NSLog(@"%@ %@ %@ %d", [item itemName], [item dateCreated],
-              [item serialNumber], [item valueInDollars]);
+        
+        //This creates an NSString, "Red Sofa" and gives it to the BNRItem
+        item.itemName = @"Red Sofa";
+        item.serialNumber = @"A1B2C";
+        item.valueInDollars = 100;
+        
+        
+        NSLog(@"%@ %@ %@ %d", item.itemName, item.dateCreated, item.serialNumber, item.valueInDollars);
         
         //Destroy the mutable array object
         items = nil;
